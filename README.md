@@ -92,3 +92,85 @@ The application uses mock data to simulate shipment records. Below are the JSON 
     ]
   }
 }
+
+```
+### Shipment Details JSON
+
+```json
+{
+  "Shipment": {
+    "AssignedToUserId": "amgr",
+    "Status": "Ready for Backroom Pick",
+    "DeliveryMethod": "PICK",
+    "ExpectedShipmentDate": "27-10-2018",
+    "OrderNo": "PICK1000001",
+    "ShipmentNo": "PICK1000001SHPNO",
+    "BillToAddress": {
+      "FirstName": "John",
+      "LastName": "Parks",
+      "EmailID": "john@example.com",
+      "Phonenumber": "1234567890",
+      "AddressLine1": "987, Broadview Avenue",
+      "City": "Omaha",
+      "Country": "US",
+      "State": "NE",
+      "ZipCode": "68101"
+    },
+    "ToAddress": {
+      "FirstName": "Abby",
+      "LastName": "Doyle",
+      "EmailID": "adoyle@example.com",
+      "DayPhone": "6478390821",
+      "AddressLine1": "6849, Wolfe Road",
+      "City": "Sunnydale",
+      "Country": "US",
+      "State": "CA",
+      "ZipCode": "94049"
+    },
+    "ShipmentLines": {
+      "TotalNumberOfRecords": "2",
+      "ShipmentLine": [
+        {
+          "Quantity": "2",
+          "OrderLine": {
+            "ItemDetails": {
+              "DisplayUnitOfMeasure": "Each",
+              "Description": "Frigidaire Window Air Conditioner 1200-BTU",
+              "ImageUrl": "<PATH_TO_IMAGE>",
+              "ItemID": "100001"
+            }
+          }
+        },
+        {
+          "Quantity": "2",
+          "OrderLine": {
+            "ItemDetails": {
+              "DisplayUnitOfMeasure": "Each",
+              "Description": "Hunter Regalia 60-in New Bronze Ceiling Fan",
+              "ImageUrl": "<PATH_TO_IMAGE>",
+              "ItemID": "100002"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+
+```
+How to Run the Application
+
+Clone the repository:
+git clone https://github.com/your-username/Ecommerce-App.git
+
+Navigate to the project directory:
+cd shipment-app
+
+Install dependencies:
+npm install
+
+Run the application:
+ng serve
+
+Open your browser and go to http://localhost:4200.
