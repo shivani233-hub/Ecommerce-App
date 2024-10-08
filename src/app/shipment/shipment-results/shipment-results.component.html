@@ -1,0 +1,103 @@
+<div class="homeContainer">
+  <h3 class="shipment">
+    {{ (isFilterApplied ? 'shipment.LABEL_FilterResults' : 'shipment.LABEL_ShipmentSearch') | translate }} </h3>
+</div>
+
+<h6 class="desk" *ngIf="screenSize === 'desktop'">
+  {{ 'shipment.LABEL_DesktopTabletResolution' | translate }}
+</h6>
+
+<h6 class="desk" *ngIf="screenSize === 'tablet'">
+  {{ 'shipment.LABEL_TabletResolution' | translate }}
+</h6>
+
+<h6 class="desk" *ngIf="screenSize === 'mobile'">
+  {{ 'shipment.LABEL_MobileResolution' | translate }}
+</h6>
+<div class="outer-box">
+  <nav class="navbar">
+    <div class="navbar-content">
+      <span class="navbar-item">{{ 'home.LABEL_IBMStoreEngagement' | translate }}</span>
+      <span class="navbar-item store-associate">{{ 'home.LABEL_StoreAssociate' | translate }}</span>
+    </div>
+  </nav>
+
+  <div class="nav-bar">
+    <i (click)="goBack()" class="fa fa-chevron-left"></i>
+    <div class="separator"></div>
+    <div class="nav-bar-title">
+      <span>{{ 'shipment.LABEL_SearchResults' | translate }}</span>
+    </div>
+    <button class="close-button" (click)="goHome()">Close</button>
+  </div>
+
+  <div class="total-records">
+    {{ results.length }} results
+
+    <button class="filter-button" (click)="toggleFilterMenu()">
+      <i class="fas fa-filter"></i>
+      <span *ngIf="isFilterActive()" class="tick-mark">&#10003;</span>
+    </button>
+
+    <div *ngIf="showFilterMenu" class="filter-menu">
+      <div class="filter-menu-header">
+        Refine
+        <button class="clos-button" (click)="closeFilterMenu()">
+          <i class="fa fa-times"></i>
+        </button>
+        <hr />
+      </div>
+      <div class="filter-menu-body">
+        <label *ngFor="let status of availableStatuses">
+          <input type="checkbox" [value]="status" (change)="toggleStatusFilter(status)"
+            [checked]="isStatusSelected(status)" />
+          {{ status }}
+        </label>
+      </div>
+      <div class="filter-menu-footer">
+        <button (click)="applyFilters()">Apply</button>
+        <button (click)="resetFilter()">Reset</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="shipment-container">
+    <div *ngFor="let shipment of visibleResults" class="shipment-rectangle" (click)="highlightPanel(shipment)"
+      [class.selected]="shipment === selectedShipment">
+
+      <div class="shipment-box">
+        <div class="shipment-column">
+          <div class="shipment-item">Order No: {{ shipment.OrderNo }}</div>
+          <div class="shipment-item">Products: {{ shipment.ShipmentLines.TotalNumberOfRecords }}</div>
+          <div class="shipment-item">Carrier: {{ shipment.ScacAndService }}</div>
+          <div class="shipment-item">Shipment #
+            <a (click)="viewDetails($event, shipment.ShipmentNo)" class="shipment-link">
+              {{ shipment.ShipmentNo }}
+            </a>
+          </div>
+        </div>
+
+        <div class="shipment-column">
+          <div class="shipment-item">{{ shipment.Status }}</div>
+          <div class="shipment-item">Assigned to: {{ shipment.AssignedToUserId }}</div>
+          <div class="shipment-item" *ngIf="shipment.DeliveryMethod === 'SHP'">
+            Expected Ship Date: {{ shipment.ExpectedShipmentDate }}
+          </div>
+          <div class="shipment-item" *ngIf="shipment.DeliveryMethod === 'PICK'">
+            Expected Pickup Date: {{ shipment.ExpectedShipmentDate }}
+          </div>
+        </div>
+
+        <div class="shipment-column">
+          <div class="shipment-item">Customer Info:</div>
+          <div class="shipment-item">{{ shipment.BillToAddress.DayPhone }}</div>
+          <div class="shipment-item">{{ shipment.BillToAddress.FirstName }} {{ shipment.BillToAddress.LastName }}</div>
+          <div class="shipment-item">{{ shipment.BillToAddress.EmailID }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loading-spinner" *ngIf="loading">Loading more shipments...</div>
+</div>

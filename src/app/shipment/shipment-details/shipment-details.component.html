@@ -1,0 +1,115 @@
+<div class="homeContainer">
+  <h3 class="landing">{{ 'shipment-details.LABEL_Shipmentdetails' | translate }}</h3>
+</div>
+
+<h6 class="desk" *ngIf="screenSize === 'desktop'">
+  {{ 'shipment-details.LABEL_ShipmentAdditionalDetails' | translate }}
+</h6>
+
+<h6 class="desk" *ngIf="screenSize === 'tablet'">
+  {{ 'home.LABEL_TabletResolution' | translate }}
+</h6>
+
+<h6 class="desk" *ngIf="screenSize === 'mobile'">
+  {{ 'home.LABEL_MobileResolution' | translate }}
+</h6>
+
+<div class="container">
+  <div class="outer-box">
+    <nav class="navbar">
+      <div class="navbar-content">
+        <span class="navbar-item">{{ 'home.LABEL_IBMStoreEngagement' | translate }}</span>
+        <span class="navbar-item store-associate">{{ 'home.LABEL_StoreAssociate' | translate }}</span>
+      </div>
+    </nav>
+
+    <div class="nav-bar">
+      <i (click)="goBack()" class="fa fa-chevron-left"></i>
+      <div class="separator"></div>
+      <div class="nav-bar-title">
+        <span>{{ 'shipment-details.LABEL_ShipmentSummary' | translate }}</span>
+      </div>
+      <button class="close-button" (click)="goHome()">Close</button>
+    </div>
+
+    <div class="shipment-container">
+      <div class="shipment-content" [ngClass]="{ 'collapsed': isCollapsed }">
+        <div class="column-1">
+          <div class="info-row">
+            <div class="info-item" id="status">
+              <p>{{ shipmentDetails.Status }}</p>
+            </div>
+            <div class="info-item">
+              <p><strong>Shipment No</strong></p>
+              <p>{{ shipmentDetails.ShipmentNo }}</p>
+            </div>
+            <div class="info-item" *ngIf="shipmentDetails.DeliveryMethod === 'SHP'">
+              <p><strong>Carrier</strong></p>
+              <p>{{ shipmentDetails.ScacAndService }}</p>
+            </div>
+            <div class="info-item" *ngIf="shipmentDetails.DeliveryMethod === 'PICK'">
+              <p><strong>Expected Pickup Date</strong></p>
+              <p>{{ shipmentDetails.ExpectedShipmentDate }}</p>
+            </div>
+            <div class="info-item">
+              <p><strong>Assigned To</strong></p>
+              <p>{{ shipmentDetails.AssignedToUserId }}</p>
+            </div>
+            <div class="info-item"></div>
+            <p><strong>Ship To</strong><br> {{ shipmentDetails.ToAddress.FirstName }} {{
+              shipmentDetails.ToAddress.LastName
+              }}
+            </p>
+            <p>{{ shipmentDetails.ToAddress.AddressLine1 }}</p>
+            <p *ngIf="shipmentDetails.ToAddress.AddressLine2">{{ shipmentDetails.ToAddress.AddressLine2 }}</p>
+            <p>{{ shipmentDetails.ToAddress.City }}, {{ shipmentDetails.ToAddress.State }} {{
+              shipmentDetails.ToAddress.ZipCode }}</p>
+            <p>{{ shipmentDetails.ToAddress.Country }}</p>
+          </div>
+
+        </div>
+
+        <div class="column-2">
+          <div class="info-row">
+            <div class="info-item">
+              <p><strong>Expected Ship Date</strong></p>
+              <p>{{ shipmentDetails.ExpectedShipmentDate }}</p>
+            </div>
+            <div class="info-item">
+              <p><strong>Customer Info</strong></p>
+              <p>{{ shipmentDetails.ToAddress.FirstName }} {{ shipmentDetails.ToAddress.LastName }}</p>
+              <p> {{ shipmentDetails.ToAddress.DayPhone }}</p>
+              <p>{{ shipmentDetails.ToAddress.EmailID }}</p>
+            </div>
+            <div class="info-item">
+              <p><strong>Bill To</strong></p>
+              <p>{{ shipmentDetails.BillToAddress.FirstName }} {{ shipmentDetails.BillToAddress.LastName }}</p>
+              <p>{{ shipmentDetails.BillToAddress.AddressLine1 }}</p>
+              <p *ngIf="shipmentDetails.BillToAddress.AddressLine2">{{ shipmentDetails.BillToAddress.AddressLine2 }}
+              </p>
+              <p>{{ shipmentDetails.BillToAddress.City }}, {{ shipmentDetails.BillToAddress.State }} {{
+                shipmentDetails.BillToAddress.ZipCode }}</p>
+              <p>{{ shipmentDetails.BillToAddress.Country }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="toggle-btn" (click)="toggleDetails()">
+        {{ isCollapsed ? 'Show Info' : 'Hide Info' }}
+      </div>
+    </div>
+    <h3 class="product-title">Products ({{ shipmentDetails.ShipmentLines.TotalNumberOfRecords }})</h3>
+    <ul class="product-list">
+      <li *ngFor="let line of shipmentDetails.ShipmentLines.ShipmentLine" class="product-item">
+        <img [src]="line.OrderLine.ItemDetails.ImageUrl || 'assets/images/default-placeholder.png'" alt="Product Image" width="100" height="100" class="product-image">
+        <div class="product-info">
+          <p>Description: <span class="product-description">{{ line.OrderLine.ItemDetails.Description }}</span></p>
+          <p>Quantity: {{ line.Quantity }} {{ line.OrderLine.ItemDetails.DisplayUnitOfMeasure }}</p>
+          <p>Product Id: {{ line.OrderLine.ItemDetails.ItemID }}</p>
+        </div>
+      </li>
+    </ul>
+    
+
+  </div>

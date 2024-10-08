@@ -1,0 +1,234 @@
+.shipment-container {
+    width: 95%;
+    margin: 20px auto;
+    background-color: #d1d0eb;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: max-height 0.3s ease;
+}
+
+.shipment-content {
+    display: flex;
+    gap: 20px;
+}
+
+.column-1,
+    .column-2 {
+        flex: 1 1 calc(50% - 20px); /* Two columns per row */
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+.info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-row p {
+    margin: 0;
+}
+
+#status {
+    color: rgb(131, 19, 131);
+}
+
+.info-value {
+    margin-left: 20px;
+}
+
+.toggle-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: 2px #a4d0d6;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    color: blue;
+}
+
+.shipment-content.collapsed {
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.homeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.landing,
+.desk {
+    text-align: center;
+    margin: 0;
+}
+
+.landing {
+    font-size: 34px;
+    color: #333;
+}
+
+.desk {
+    font-size: 24px;
+    color: #333;
+}
+
+.container {
+    max-width: 100%;
+    margin: 10px auto 20px;
+    padding: 15px;
+}
+
+
+.outer-box {
+    background-color: #eef2f3;
+    border: 1px solid #d7dedf;
+    padding: 10;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+}
+
+.navbar-item {
+    font-size: 16px;
+}
+
+.store-associate {
+    background-color: #000;
+    color: #fff;
+    padding: 0px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.inner-box {
+    background-color: #ffffff;
+    border: 1px solid #cacdce;
+    padding: 10px;
+    width: 100%;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #cabfbf;
+    border-top: 1px solid #cabfbf;
+    background-color: #f5f5f5;
+}
+
+.nav-bar i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-bar-title {
+    flex: 1;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.separator {
+    border-left: 1px solid #ddd;
+    height: 20px;
+    margin: 0 15px;
+}
+
+.close-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product-title {
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-item {
+    display: flex; /* Aligns the image and info side by side */
+    align-items: center; /* Vertically centers the content */
+    flex: 1 1 calc(50% - 20px); /* Two items per row with spacing */
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space below each item */
+    position: relative; /* For positioning the border */
+}
+
+.product-item:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* Border between items */
+}
+
+.product-image {
+    margin-right: 20px; /* Space between the image and the info */
+}
+
+.product-info {
+    flex: 1; /* Takes up remaining space */
+}
+
+.product-description {
+    color: blue;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .column-1,
+    .column-2 {
+        flex: 1 1 100%; /* Stack columns on smaller screens */
+    }
+    
+    .shipment-content {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+}
+

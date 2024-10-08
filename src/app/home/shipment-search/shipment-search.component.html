@@ -1,0 +1,60 @@
+<div class="homeContainer">
+  <h3 class="landing">{{ 'home.LABEL_HomePage' | translate }}</h3>
+</div>
+
+<h6 class="desk" *ngIf="screenSize === 'desktop'">
+  {{ 'home.LABEL_DesktopTabletResolution' | translate }}
+</h6>
+
+<h6 class="desk" *ngIf="screenSize === 'tablet'">
+  {{ 'home.LABEL_TabletResolution' | translate }}
+</h6>
+
+<h6 class="desk" *ngIf="screenSize === 'mobile'">
+  {{ 'home.LABEL_MobileResolution' | translate }}
+</h6>
+
+<div class="container">
+  <div class="outer-box">
+    <nav class="navbar">
+      <div class="navbar-content">
+        <span class="navbar-item">{{ 'home.LABEL_IBMStoreEngagement' | translate }}</span>
+        <span class="navbar-item store-associate">{{ 'home.LABEL_StoreAssociate' | translate }}</span>
+      </div>
+    </nav>
+
+    <h6>{{ 'home.LABEL_WhatDoYouWantToDO' | translate }}</h6>
+    <div class="inner-box">
+      <div class="header">
+        <span>{{ 'home.LABEL_ShipmentSearch' | translate }}</span>
+      </div>
+
+      <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+        <div class="form-group">
+          <input id="order" formControlName="order" placeholder="{{ 'home.PLACEHOLDER_OrderNo' | translate }}" />
+        </div>
+        <div class="form-group">
+          <input id="shipment" formControlName="shipment" placeholder="{{ 'home.PLACEHOLDER_ShipmentNo' | translate }}" />
+        </div>
+        <div class="form-group">
+          <input id="firstName" formControlName="firstName" placeholder="{{ 'home.PLACEHOLDER_FirstName' | translate }}" />
+        </div>
+        <div class="form-group">
+          <input id="lastName" formControlName="lastName" placeholder="{{ 'home.PLACEHOLDER_LastName' | translate }}" />
+        </div>
+        <div class="form-group">
+          <input id="email" formControlName="email" placeholder="{{ 'home.PLACEHOLDER_Email' | translate }}" />
+        </div>
+        <div class="form-group">
+          <input id="phone" formControlName="phone" placeholder="{{ 'home.PLACEHOLDER_Phone' | translate }}" />
+        </div>
+        <div class="button-group-wrapper">
+          <div class="button-group">
+            <button type="button" class="reset-button" (click)="onReset()">{{ 'home.BUTTON_Reset' | translate }}</button>
+            <button type="submit">{{ 'home.BUTTON_Search' | translate }}</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+@import 'app/_variables.scss';
+
+.container {
+  padding: 1rem;
+
+  // Desktop styles
+  @media (min-width: $breakpoint-desktop) {
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      input {
+        width: 48%;
+      }
+    }
+
+    .button-group-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+
+      button {
+        width: 48%;
+      }
+    }
+  }
+
+  // Tablet styles
+  @media (max-width: $breakpoint-desktop) and (min-width: #{calc($breakpoint-tablet + 1px)}) {
+    .form-group {
+      display: block;
+      margin-bottom: 1rem;
+
+      input {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .button-group-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+
+      button {
+        width: 48%;
+      }
+    }
+  }
+
+  // Mobile styles
+  @media (max-width: $breakpoint-mobile) {
+    .form-group {
+      display: block;
+      margin-bottom: 1rem;
+
+      input {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .button-group-wrapper {
+      display: block;
+
+      button {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+// Adjust font sizes for different resolutions
+h3 {
+  font-size: 2rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1.2rem;
+  }
+}

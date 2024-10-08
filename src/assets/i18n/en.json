@@ -1,0 +1,43 @@
+{
+  "home": {
+    "LABEL_HomePage": "Home/Landing Page",
+    "LABEL_StoreAssociate": "Store Associate",
+    "LABEL_IBMStoreEngagement":"IBM Store Engagement",
+    "LABEL_DesktopTabletResolution": "Desktop resolution",
+    "LABEL_TabletResolution": "Tablet Resolution",
+    "LABEL_MobileResolution": "Mobile Resolution",
+    "LABEL_WhatDoYouWantToDO": "What do you want to do?",
+    "LABEL_ShipmentSearch": "Shipment Search",
+    "PLACEHOLDER_OrderNo": "Order #",
+    "PLACEHOLDER_ShipmentNo": "Shipment #",
+    "PLACEHOLDER_FirstName": "First Name",
+    "PLACEHOLDER_LastName": "Last Name",
+    "PLACEHOLDER_Email": "Email Id",
+    "PLACEHOLDER_Phone": "Phone number",
+    "BUTTON_Reset": "Reset",
+    "BUTTON_Search": "Search"
+  },
+  "shipment": {
+    "LABEL_ShipmentSearch": "Shipment Search Results Screen",
+    "LABEL_DesktopTabletResolution": "Desktop resolution",
+    "LABEL_TabletResolution": "Tablet Resolution",
+    "LABEL_MobileResolution": "Mobile Resolution",
+    "LABEL_SearchResults": "Shipment Search Results",
+    "LABEL_FilterResults":"Shipment Search Filter Screen",
+    "BUTTON_Back": "Back",
+    "BUTTON_ViewDetails": "View Details",
+    "LABEL_ShipmentDetails": "Shipment Details",
+    "BUTTON_Home": "Home"
+  },
+
+  "shipment-details": {
+    "LABEL_Shipmentdetails": "Shipment Details",
+    "LABEL_ShipmentAdditionalDetails": "Shipment additional details expanded",
+    "LABEL_DesktopTabletResolution": "Desktop resolution",
+    "LABEL_TabletResolution": "Tablet Resolution",
+    "LABEL_MobileResolution": "Mobile Resolution",
+    "LABEL_SearchResults": "Shipment Search Results",
+    "LABEL_FilterResults":"Shipment Search Filter Screen",
+    "LABEL_ShipmentSummary": "Shipment Summary"
+  }
+}

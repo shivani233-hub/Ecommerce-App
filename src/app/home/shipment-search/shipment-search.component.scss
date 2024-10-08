@@ -1,0 +1,144 @@
+.navbar {
+  background-color: #000; 
+  color: #fff; 
+  padding: 10px 20px; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  border-bottom: 1px solid #333; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  max-width: 100%;
+}
+
+.navbar-item {
+  font-size: 16px; 
+}
+
+.store-associate {
+  background-color: #000; 
+  color: #fff; 
+  padding: 0px 10px;
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+
+
+.container {
+  max-width: 800px; 
+  margin: 10px auto 20px; 
+  padding: 15px;
+}
+
+
+.outer-box {
+  background-color: #eef2f3; 
+  border: 1px solid #d7dedf; 
+  padding: 0; 
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.inner-box {
+  background-color: #ffffff; 
+  border: 1px solid #cacdce; 
+  padding: 20px;
+  width: 70%; 
+  max-width: 70%; 
+  display: flex;
+  flex-direction: column;
+}
+
+
+.header {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 12px; 
+}
+
+input {
+  width: 100%;
+  padding: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+
+  &::placeholder {
+    color: #888;
+    font-size: 14px;
+  }
+}
+
+.button-group-wrapper {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: 10px;
+}
+
+.button-group {
+  display: flex;
+  align-items: center; 
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.reset-button {
+  background-color: #6c757d;
+  margin-right: 10px; 
+
+  &:hover {
+    background-color: #5a6268;
+  }
+}
+
+.homeContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 20px; 
+}
+
+.landing, .desk {
+  text-align: center; 
+  margin: 0; 
+}
+
+.landing {
+  font-size: 34px; 
+  color: #333; 
+}
+
+.desk {
+  font-size: 24px; 
+  color: #333; 
+}

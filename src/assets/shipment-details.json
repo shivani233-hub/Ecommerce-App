@@ -1,0 +1,164 @@
+[
+  {
+    "Shipment": {
+      "AssignedToUserId": "amgr",
+      "Status": "Ready for Backroom Pick",
+      "DeliveryMethod": "PICK",
+      "ExpectedShipmentDate": "27-10-2018",
+      "OrderNo": "PICK1000001",
+      "ScacAndService": "UPSNGround",
+      "ShipmentKey": "PICK1000001SHPKEY",
+      "ShipmentNo": "PICK1000001SHPNO",
+      "BillToAddress": {
+        "FirstName": "John",
+        "LastName": "Parks",
+        "EmailID": "john@example.com",
+        "Phonenumber": "1234567890",
+        "AddressID": "200001",
+        "AddressLine1": "987, Broadview Avenue",
+        "AddressLine2": "",
+        "City": "Omaha",
+        "Country": "US",
+        "State": "NE",
+        "ZipCode": "68101",
+        "PersonInfoKey": "1000002"
+      },
+      "ToAddress": {
+        "FirstName": "Abby",
+        "LastName": "Doyle",
+        "EmailID": "adoyle@example.com",
+        "DayPhone": "6478390821",
+        "AddressID": "200002",
+        "AddressLine1": "6849, Wolfe Road",
+        "AddressLine2": "123",
+        "City": "Sunnydale",
+        "Country": "US",
+        "State": "CA",
+        "ZipCode": "94049",
+        "PersonInfoKey": "100001"
+      },
+      "ShipmentLines": {
+        "TotalNumberOfRecords": "2",
+        "ShipmentLine": [
+          {
+            "Quantity": "2",
+            "ShipmentLineKey": "PICK100001SHPLINEKEY",
+            "OrderLine": {
+              "ItemDetails": {
+                "DisplayUnitOfMeasure": "Each",
+                "Description": "Frigidaire Window Air Conditioner 1200-BTU",
+                "ImageUrl": "assets/images/frigidaire.jpeg",
+                "ItemID": "100001"
+              }
+            }
+          },
+          {
+            "Quantity": "2",
+            "ShipmentLineKey": "PICK100002SHPLINEKEY",
+            "OrderLine": {
+              "ItemDetails": {
+                "DisplayUnitOfMeasure": "Each",
+                "Description": "Hunter Regalia 60-in New Bronze Ceiling Fan",
+                "ImageUrl": "assets/images/Ceiling Fan.jpg",
+                "ItemID": "100002"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Shipment": {
+      "AssignedToUserId": "abrooks",
+      "Status": "Cancelled",
+      "DeliveryMethod": "SHP",
+      "ExpectedShipmentDate": "27-10-2017",
+      "OrderNo": "SFS1000001",
+      "ScacAndService": "UPSNGround",
+      "ShipmentKey": "SFS1000001_SHPKEY",
+      "ShipmentNo": "SFS1000001SHPNO",
+      "BillToAddress": {
+        "FirstName": "Ben",
+        "LastName": "Zymer",
+        "EmailID": "zymer@org.com",
+        "Phonenumber": "123456789",
+        "AddressID": "100001",
+        "AddressLine1": "123, Maple Avenue",
+        "AddressLine2": "Apt 3A",
+        "City": "New York",
+        "Country": "US",
+        "State": "NY",
+        "ZipCode": "10001",
+        "PersonInfoKey": "1000001"
+      },
+      "ToAddress": {
+        "FirstName": "Sara",
+        "LastName": "Johnson",
+        "EmailID": "sjohnson@example.com",
+        "DayPhone": "9876543210",
+        "AddressID": "100002",
+        "AddressLine1": "789, Pine Street",
+        "AddressLine2": "Suite 6B",
+        "City": "Brooklyn",
+        "Country": "US",
+        "State": "NY",
+        "ZipCode": "11201",
+        "PersonInfoKey": "100002"
+      },
+      "ShipmentLines": {
+        "TotalNumberOfRecords": "4",
+        "ShipmentLine": [
+          {
+            "Quantity": "1",
+            "ShipmentLineKey": "SFS100001SHPLINEKEY1",
+            "OrderLine": {
+              "ItemDetails": {
+                "DisplayUnitOfMeasure": "Each",
+                "Description": "Dyson V11 Torque Drive Vacuum Cleaner",
+                "ImageUrl": "assets/images/dyson.jpg",
+                "ItemID": "100003"
+              }
+            }
+          },
+          {
+            "Quantity": "1",
+            "ShipmentLineKey": "SFS100001SHPLINEKEY2",
+            "OrderLine": {
+              "ItemDetails": {
+                "DisplayUnitOfMeasure": "Each",
+                "Description": "Samsung Galaxy S21",
+                "ImageUrl":"assets/images/samsung-galaxy.jpg",
+                "ItemID": "100004"
+              }
+            }
+          },
+          {
+            "Quantity": "1",
+            "ShipmentLineKey": "SFS100001SHPLINEKEY3",
+            "OrderLine": {
+              "ItemDetails": {
+                "DisplayUnitOfMeasure": "Each",
+                "Description": "Apple Watch Series 6",
+                "ImageUrl": "assets/images/apple watch.jpg",
+                "ItemID": "100005"
+              }
+            }
+          },
+          {
+            "Quantity": "1",
+            "ShipmentLineKey": "SFS100001SHPLINEKEY4",
+            "OrderLine": {
+              "ItemDetails": {
+                "DisplayUnitOfMeasure": "Each",
+                "Description": "Sony A7 III Camera",
+                "ImageUrl": "assets/images/camera.jpeg",
+                "ItemID": "100006"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]
