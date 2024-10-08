@@ -1,5 +1,14 @@
 # Shipment Management Application
 
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or above) and npm installed on your machine. You can download them from [nodejs.org](https://nodejs.org/).
+- Angular CLI installed globally. If you don’t have it installed, run:
+  ```bash
+  npm install -g @angular/cli
+
 ## Overview
 This Angular application is designed to manage and search for shipment details. It features three main screens: a shipment search screen, a results screen, and a details screen. Users can easily find shipment records and view detailed information based on their searches.
 
