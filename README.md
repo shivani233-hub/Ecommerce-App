@@ -41,4 +41,54 @@ All static text is managed through JSON translation files using ngx-translate. F
     "LABEL_WhatDoYouWantToDO": "What do you want to do?"
   }
 }
+```
+## Mock Data
 
+The application uses mock data to simulate shipment records. Below are the JSON structures used for the shipment list and shipment details.
+
+### Shipment List JSON
+
+```json
+{
+  "Shipments": {
+    "TotalNumberOfRecords": "2",
+    "Shipment": [
+      {
+        "AssignedToUserId": "abrooks",
+        "DeliveryMethod": "SHP",
+        "ExpectedShipmentDate": "27-10-2017",
+        "OrderNo": "SFS1000001",
+        "ScacAndService": "UPSNGround",
+        "ShipmentNo": "SFS1000001SHPNO",
+        "Status": "Cancelled",
+        "BillToAddress": {
+          "DayPhone": "123456789",
+          "EMailID": "Zymer@org.com",
+          "FirstName": "Ben",
+          "LastName": "Zymer"
+        },
+        "ShipmentLines": {
+          "TotalNumberOfRecords": "4"
+        }
+      },
+      {
+        "AssignedToUserId": "amgr",
+        "DeliveryMethod": "PICK",
+        "ExpectedShipmentDate": "28-10-2017",
+        "OrderNo": "PICK1000001",
+        "ScacAndService": "",
+        "ShipmentNo": "PICK1000001SHPNO",
+        "Status": "Ready for Backroom Pick",
+        "BillToAddress": {
+          "DayPhone": "1234567890",
+          "EMailID": "adoyle@org.com",
+          "FirstName": "Abby",
+          "LastName": "Doyle"
+        },
+        "ShipmentLines": {
+          "TotalNumberOfRecords": "6"
+        }
+      }
+    ]
+  }
+}
