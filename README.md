@@ -1,27 +1,176 @@
-# ShipmentApp
+# Shipment Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+## Getting Started
 
-## Development server
+### Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js (version 14 or above) and npm installed on your machine. You can download them from [nodejs.org](https://nodejs.org/).
+- Angular CLI installed globally. If you don’t have it installed, run:
+  ```bash
+  npm install -g @angular/cli
 
-## Code scaffolding
+## Overview
+This Angular application is designed to manage and search for shipment details. It features three main screens: a shipment search screen, a results screen, and a details screen. Users can easily find shipment records and view detailed information based on their searches.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
+- **Shipment Search Screen**: Allows users to search for shipments. If no input is provided, all shipment records are displayed.
+- **Shipment Search Results Screen**: Displays the results of the search with pagination support using infinite scrolling.
+- **Shipment Details Screen**: Provides detailed information about a selected shipment, including delivery method and expected dates.
 
-## Build
+## Tech Stack
+- **Frontend**: Angular 15+
+- **Styling**: SCSS, Bootstrap 5, ng-bootstrap v12.x or above, Flexbox
+- **Localization**: ngx-translate for internationalization and localization
+- **Icons**: SVG and font icons
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Modules
+- **Home Module**: Contains the shipment search screen and is lazy-loaded.
+- **Shipment Module**: Contains the results and details screens and is lazy-loaded.
 
-## Running unit tests
+## Responsive Design
+The application is styled for different devices:
+- **Mobile**: max-width: 480px
+- **Tablet**: max-width: 767px
+- **Desktop**: max-width: 1023px
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Localization
+All static text is managed through JSON translation files using ngx-translate. For example:
+```json
+{
+  "home": {
+    "LABEL_WhatDoYouWantToDO": "What do you want to do?"
+  }
+}
+```
+## Mock Data
 
-## Running end-to-end tests
+The application uses mock data to simulate shipment records. Below are the JSON structures used for the shipment list and shipment details.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Shipment List JSON
 
-## Further help
+```json
+{
+  "Shipments": {
+    "TotalNumberOfRecords": "2",
+    "Shipment": [
+      {
+        "AssignedToUserId": "abrooks",
+        "DeliveryMethod": "SHP",
+        "ExpectedShipmentDate": "27-10-2017",
+        "OrderNo": "SFS1000001",
+        "ScacAndService": "UPSNGround",
+        "ShipmentNo": "SFS1000001SHPNO",
+        "Status": "Cancelled",
+        "BillToAddress": {
+          "DayPhone": "123456789",
+          "EMailID": "Zymer@org.com",
+          "FirstName": "Ben",
+          "LastName": "Zymer"
+        },
+        "ShipmentLines": {
+          "TotalNumberOfRecords": "4"
+        }
+      },
+      {
+        "AssignedToUserId": "amgr",
+        "DeliveryMethod": "PICK",
+        "ExpectedShipmentDate": "28-10-2017",
+        "OrderNo": "PICK1000001",
+        "ScacAndService": "",
+        "ShipmentNo": "PICK1000001SHPNO",
+        "Status": "Ready for Backroom Pick",
+        "BillToAddress": {
+          "DayPhone": "1234567890",
+          "EMailID": "adoyle@org.com",
+          "FirstName": "Abby",
+          "LastName": "Doyle"
+        },
+        "ShipmentLines": {
+          "TotalNumberOfRecords": "6"
+        }
+      }
+    ]
+  }
+}
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+### Shipment Details JSON
+
+```json
+{
+  "Shipment": {
+    "AssignedToUserId": "amgr",
+    "Status": "Ready for Backroom Pick",
+    "DeliveryMethod": "PICK",
+    "ExpectedShipmentDate": "27-10-2018",
+    "OrderNo": "PICK1000001",
+    "ShipmentNo": "PICK1000001SHPNO",
+    "BillToAddress": {
+      "FirstName": "John",
+      "LastName": "Parks",
+      "EmailID": "john@example.com",
+      "Phonenumber": "1234567890",
+      "AddressLine1": "987, Broadview Avenue",
+      "City": "Omaha",
+      "Country": "US",
+      "State": "NE",
+      "ZipCode": "68101"
+    },
+    "ToAddress": {
+      "FirstName": "Abby",
+      "LastName": "Doyle",
+      "EmailID": "adoyle@example.com",
+      "DayPhone": "6478390821",
+      "AddressLine1": "6849, Wolfe Road",
+      "City": "Sunnydale",
+      "Country": "US",
+      "State": "CA",
+      "ZipCode": "94049"
+    },
+    "ShipmentLines": {
+      "TotalNumberOfRecords": "2",
+      "ShipmentLine": [
+        {
+          "Quantity": "2",
+          "OrderLine": {
+            "ItemDetails": {
+              "DisplayUnitOfMeasure": "Each",
+              "Description": "Frigidaire Window Air Conditioner 1200-BTU",
+              "ImageUrl": "<PATH_TO_IMAGE>",
+              "ItemID": "100001"
+            }
+          }
+        },
+        {
+          "Quantity": "2",
+          "OrderLine": {
+            "ItemDetails": {
+              "DisplayUnitOfMeasure": "Each",
+              "Description": "Hunter Regalia 60-in New Bronze Ceiling Fan",
+              "ImageUrl": "<PATH_TO_IMAGE>",
+              "ItemID": "100002"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+
+```
+How to Run the Application
+
+Clone the repository:
+git clone https://github.com/your-username/Ecommerce-App.git
+
+Navigate to the project directory:
+cd shipment-app
+
+Install dependencies:
+npm install
+
+Run the application:
+ng serve
+
+Open your browser and go to http://localhost:4200.
