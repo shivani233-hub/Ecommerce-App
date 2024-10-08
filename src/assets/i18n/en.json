@@ -2,7 +2,7 @@
   "home": {
     "LABEL_HomePage": "Home/Landing Page",
     "LABEL_StoreAssociate": "Store Associate",
-    "LABEL_IBMStoreEngagement":"IBM Store Engagement",
+    "LABEL_StoreEngagement":" Store Engagement",
     "LABEL_DesktopTabletResolution": "Desktop resolution",
     "LABEL_TabletResolution": "Tablet Resolution",
     "LABEL_MobileResolution": "Mobile Resolution",
