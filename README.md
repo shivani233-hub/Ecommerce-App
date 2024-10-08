@@ -177,5 +177,9 @@ Open your browser and go to http://localhost:4200.
 
 ![Example Image](assets/images/shipmentSearch.png)
 
+## Shipment Example
+
+![Example Image](assets/images/shipmentSearch.png)  
+![Raw Example Image](https://raw.githubusercontent.com/username/repository/main/assets/images/shipmentSearch.png)
 
 
