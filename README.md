@@ -1,27 +1,92 @@
-# ShipmentApp
+# Shipment Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+## Overview
+This Angular application is designed to manage and search for shipment details. It features three main screens: a shipment search screen, a results screen, and a details screen. Users can easily find shipment records and view detailed information based on their searches.
 
-## Development server
+## Features
+- **Shipment Search Screen**: Allows users to search for shipments. If no input is provided, all shipment records are displayed.
+- **Shipment Search Results Screen**: Displays the results of the search with pagination support using infinite scrolling.
+- **Shipment Details Screen**: Provides detailed information about a selected shipment, including delivery method and expected dates.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tech Stack
+- **Frontend**: Angular 15+
+- **Styling**: SCSS, Bootstrap 5, ng-bootstrap v12.x or above, Flexbox
+- **Localization**: ngx-translate for internationalization and localization
+- **Icons**: SVG and font icons
 
-## Code scaffolding
+## Modules
+- **Home Module**: Contains the shipment search screen and is lazy-loaded.
+- **Shipment Module**: Contains the results and details screens and is lazy-loaded.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Responsive Design
+The application is styled for different devices:
+- **Mobile**: max-width: 480px
+- **Tablet**: max-width: 767px
+- **Desktop**: max-width: 1023px
 
-## Build
+## Localization
+All static text is managed through JSON translation files using ngx-translate. For example:
+```json
+{
+  "home": {
+    "LABEL_WhatDoYouWantToDO": "What do you want to do?"
+  }
+}
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Mock Data
+Mock JSON data for shipments is placed under the assets directory for testing purposes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Shipment List JSON
+{
+  "Shipments": {
+    "TotalNumberOfRecords": "2",
+    "Shipment": [
+      {
+        "AssignedToUserId": "abrooks",
+        "DeliveryMethod": "SHP",
+        "ExpectedShipmentDate": "27-10-2017",
+        "OrderNo": "SFS1000001",
+        "ScacAndService": "UPSNGround",
+        "ShipmentNo": "SFS1000001SHPNO",
+        "Status": "Cancelled",
+        "BillToAddress": {
+          "DayPhone": "123456789",
+          "EmailID": "Zymer@org.com",
+          "FirstName": "Ben",
+          "LastName": "Zymer"
+        },
+        "ShipmentLines": {
+          "TotalNumberOfRecords": "4"
+        }
+      },
+      ...
+    ]
+  }
+}
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Shipment Details JSON
 
-## Further help
+{
+  "Shipment": {
+    "AssignedToUserId": "amgr",
+    "Status": "Ready for Backroom Pick",
+    "DeliveryMethod": "PICK",
+    "ExpectedShipmentDate": "27-10-2018",
+    "OrderNo": "PICK1000001",
+    ...
+  }
+}
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+How to Run the Application
+
+Clone the repository:
+git clone https://github.com/your-username/Ecommerce-App.git
+
+Navigate to the project directory:
+cd shipment-app
+npm install
+ng serve
+Open your browser and go to http://localhost:4200.
