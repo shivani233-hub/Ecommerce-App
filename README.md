@@ -32,3 +32,36 @@ All static text is managed through JSON translation files using ngx-translate. F
     "LABEL_WhatDoYouWantToDO": "What do you want to do?"
   }
 }
+
+
+## Mock Data
+Mock JSON data for shipments is placed under the assets directory for testing purposes.
+
+Shipment List JSON
+
+{
+  "Shipments": {
+    "TotalNumberOfRecords": "2",
+    "Shipment": [
+      {
+        "AssignedToUserId": "abrooks",
+        "DeliveryMethod": "SHP",
+        "ExpectedShipmentDate": "27-10-2017",
+        "OrderNo": "SFS1000001",
+        "ScacAndService": "UPSNGround",
+        "ShipmentNo": "SFS1000001SHPNO",
+        "Status": "Cancelled",
+        "BillToAddress": {
+          "DayPhone": "123456789",
+          "EmailID": "Zymer@org.com",
+          "FirstName": "Ben",
+          "LastName": "Zymer"
+        },
+        "ShipmentLines": {
+          "TotalNumberOfRecords": "4"
+        }
+      },
+      ...
+    ]
+  }
+}
