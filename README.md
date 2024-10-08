@@ -174,3 +174,8 @@ Run the application:
 ng serve
 
 Open your browser and go to http://localhost:4200.
+
+![Example Image](assets/images/shipmentSearch.png)
+
+
+
