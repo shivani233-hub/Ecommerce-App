@@ -173,4 +173,16 @@ npm install
 Run the application:
 ng serve
 
+## ScreenShots
+
 ![image](https://github.com/user-attachments/assets/a3ff2173-89f7-4dc1-a3ad-cace09d1b55b)
+
+![image](https://github.com/user-attachments/assets/7c289fe2-5ac8-4192-a78d-e476d673a260)
+![image](https://github.com/user-attachments/assets/bf4ee00e-eb7a-40e0-9933-62c29347be39)
+![image](https://github.com/user-attachments/assets/5c5e5c40-8b00-494d-a644-902224504811)
+![image](https://github.com/user-attachments/assets/c98d1d62-88ea-4cca-9975-0ddec7cc647a)
+![image](https://github.com/user-attachments/assets/705f2511-2beb-4f77-848f-4b1846392a6f)
+
+
+
+
