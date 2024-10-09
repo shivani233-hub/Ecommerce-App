@@ -173,13 +173,4 @@ npm install
 Run the application:
 ng serve
 
-Open your browser and go to http://localhost:4200.
-
-![Example Image](assets/images/shipmentSearch.png)
-
-## Shipment Example
-
-![Example Image](assets/images/shipmentSearch.png)  
-![Raw Example Image](https://raw.githubusercontent.com/username/repository/main/assets/images/shipmentSearch.png)
-
-
+![image](https://github.com/user-attachments/assets/a3ff2173-89f7-4dc1-a3ad-cace09d1b55b)
